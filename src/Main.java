@@ -43,6 +43,7 @@ public class Main {
         // vytvoření rezervací
         Booking booking1 = new Booking(room1, LocalDate.of(2021, 07, 19), LocalDate.of(2021, 07, 26), true);
         booking1.setGuestA(guest1);
+        //booking1.setGuestB(guest2);
         Booking booking2 = new Booking(room3, LocalDate.of(2021, 9, 01), LocalDate.of(2021, 9, 14), true);
         booking2.setGuestA(guest1);
         booking2.setGuestB(guest2);

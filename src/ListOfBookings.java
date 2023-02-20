@@ -12,21 +12,20 @@ public class ListOfBookings {
     public String prepareText() {
         String text = "Seznam rezervací: \n";
         for (Booking booking : hotelBookings) {
-            text.concat("Pokoj " + booking.getRoom().getRoomNumber() + ": "
+            text = text + "Pokoj " + booking.getRoom().getRoomNumber() + ": "
                     + booking.getGuestA().getAddress() + " "
                     + booking.getGuestA().getName() + " "
-                    + booking.getGuestA().getSurname() + ", ");
+                    + booking.getGuestA().getSurname() + ", ";
             if (booking.getGuestB() != null) {
-                text.concat(booking.getGuestB().getAddress() + " " + booking.getGuestB().getName() + " " + booking.getGuestB().getSurname() + " ");
+                text = text + booking.getGuestB().getAddress() + " " + booking.getGuestB().getName() + " " + booking.getGuestB().getSurname() + " ";
             }
             if (booking.getGuestC() != null) {
-                text.concat(booking.getGuestC().getAddress() + " " + booking.getGuestC().getName() + " " + booking.getGuestC().getSurname() + " ");
+                text = text + booking.getGuestC().getAddress() + " " + booking.getGuestC().getName() + " " + booking.getGuestC().getSurname() + " ";
             }
-            text.concat(
-                    "Příjezd: " + booking.getStertOfBooking() + ", "
+            text = text + "Příjezd: " + booking.getStertOfBooking() + ", "
                             + "Odjezd: " + booking.getEndOfBooking() + ", "
                             + "služební cesta: " + booking.getBusinessTrip()
-                            + "\n");
+                            + "\n";
         }
         return text;
     }
