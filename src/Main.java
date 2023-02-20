@@ -12,10 +12,10 @@ public class Main {
         String room3Description;
 
         // vytvoření prvního hosta
-        Guest guest1 = new Guest("Paní","Adéla","Malíková",LocalDate.of(1993,03,13));
+        Guest guest1 = new Guest("Paní", "Adéla", "Malíková", LocalDate.of(1993, 03, 13));
 
         // vytvoření druhého hosta
-        Guest guest2 = new Guest("Pan","Jan","Dvořáček",LocalDate.of(1995,05,05));
+        Guest guest2 = new Guest("Pan", "Jan", "Dvořáček", LocalDate.of(1995, 05, 05));
 
         // vytvoření řetězce hostů
         guestDescription1 = ("Host 1: " + guest1.getAddress() + " " + guest1.getName() + " " + guest1.getSurname() + " " + guest1.getDateOfBirth());
@@ -26,9 +26,9 @@ public class Main {
         System.out.println(guestDescription2);
 
         // vytvoření pokojů
-        Room room1 = new Room(1,1,true,true,1000);
-        Room room2 = new Room(2,1,true,true,1000);
-        Room room3 = new Room(3,3,false,true,2400);
+        Room room1 = new Room(1, 1, true, true, 1000);
+        Room room2 = new Room(2, 1, true, true, 1000);
+        Room room3 = new Room(3, 3, false, true, 2400);
 
         // vytvoření řetězce pokojů
         room1Description = ("Pokoj " + room1.getRoomNumber() + ": počet lůžek: " + room1.getNumberOfBeds() + ", s balkónem: " + room1.isBalcony() + ", je výhled na moře: " + room1.isViewOnSea() + ", cena za noc: " + room1.getPricePerNight()) + " Kč/noc";
@@ -41,9 +41,9 @@ public class Main {
         System.out.println(room3Description);
 
         // vytvoření rezervací
-        Booking booking1 = new Booking(room1,LocalDate.of(2021,07,19),LocalDate.of(2021,07,26),true);
+        Booking booking1 = new Booking(room1, LocalDate.of(2021, 07, 19), LocalDate.of(2021, 07, 26), true);
         booking1.setGuestA(guest1);
-        Booking booking2 = new Booking(room3,LocalDate.of(2021,9, 01),LocalDate.of(2021,9,14),true);
+        Booking booking2 = new Booking(room3, LocalDate.of(2021, 9, 01), LocalDate.of(2021, 9, 14), true);
         booking2.setGuestA(guest1);
         booking2.setGuestB(guest2);
 
@@ -53,9 +53,6 @@ public class Main {
         listOfBookings.add(booking2);
 
         System.out.println(listOfBookings.prepareText());
-
-
-
 
 
     }

@@ -12,6 +12,7 @@ public class Guest {
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
     }
+
     public String getAddress() {
         return address;
     }
@@ -43,9 +44,6 @@ public class Guest {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-
-
-
 
 
 }
